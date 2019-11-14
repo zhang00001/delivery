@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Details": "../../components/details/details"
+  },
+  "navigationBarTitleText": "提货确认单"
+}

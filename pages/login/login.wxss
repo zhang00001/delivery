@@ -1,0 +1,80 @@
+/* pages/login/login.wxss */
+.banner-wrapper{
+  width:750rpx;
+  height:350rpx;
+}
+.banner-wrapper>.banner{
+  width:160rpx;
+  height:160rpx;
+  border-radius:50%;
+  background:rgba(163,38,53,1);
+  font-size:32rpx;
+  color:white;
+}
+
+
+.input-wrapper{
+  box-sizing:border-box;
+  padding:0 85rpx;
+}
+.input-wrapper>.input{
+  box-sizing:border-box;
+  height:120rpx;
+  border-bottom:1px solid rgba(234,234,234,1);
+  width:570rpx;   
+  justify-content:flex-start;
+  /* 输入框总宽度 */
+}
+.input-wrapper>.input>.img-wrapper{
+  height:120rpx;
+  width:50rpx;
+}
+.img-wrapper>image{
+  margin-right:10rpx;
+}
+.img-wrapper>.phone-icon{
+  width:24rpx;
+  height:38rpx;
+}
+.img-wrapper>.email-icon{
+  width:35rpx;
+  height:27rpx;
+}
+
+
+
+.account-input>input{
+  width:510rpx;
+}
+.code-input>input{
+  width:315rpx; 
+}
+.code-input>.sendCode{
+  margin-left:20rpx;
+  width:165rpx;
+  height:55rpx;
+  line-height:55rpx;
+  text-align:center;
+  border:1px solid rgba(163,38,53,1);
+  border-radius:10rpx;
+  color:#A32635;
+  font-size:28rpx;
+}
+
+
+
+.btn-wrapper>.btn{
+  width:590rpx;
+  height:90rpx;
+  line-height:90rpx;
+  text-align:center;
+  background:rgba(163,38,53,1);
+  border-radius:10rpx;
+  font-size:36rpx;
+  color:white;
+  margin:35rpx auto;
+}
+.btn-wrapper>.notBtn{
+  background:#EAEAEA;
+  color:#999999;
+}

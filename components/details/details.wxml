@@ -1,0 +1,101 @@
+<view class="orderDatails-data">
+  <view class="orderDatails-title">
+    详情
+  </view>
+  <view class="orderDatails-orderNumber bold" wx:if="{{datas.placeName}}">
+    <view class="left" >
+      酒店名字:
+    </view>
+    <view class="right">
+     {{datas.placeName}}
+    </view>
+  </view>
+  <view class="orderDatails-orderNumber bold"  wx:if="{{datas.companyName}}">
+    <view class="left">
+      配酒公司:
+    </view>
+    <view class="right">
+      {{datas.companyName}}
+    </view>
+  </view>
+
+  <view class="orderDatails-orderNumber bold"  wx:if="{{datas.organizer}}">
+    <view class="left">
+      配酒公司:
+    </view>
+    <view class="right">
+      {{datas.organizer}}
+    </view>
+  </view>
+  <view class="orderDatails-orderNumber bold">
+    <view class="left">
+      举办时间:
+    </view>
+    <view class="right">
+     {{ datas.hostingTime}}
+    </view>
+  </view>
+
+
+  <view class="orderDatails-orderNumber bold" wx:if="{{true}}" wx:if="{{datas.wineSkuList}}">
+    <view class="left">
+      配酒数量:
+    </view>
+    <view class="right">
+    <view wx:for="{{datas.wineSkuList}}">{{item}}瓶</view>
+      <!-- A酒(60瓶) B酒(20瓶) -->
+    </view>
+  </view>
+
+  <view class="divide"></view>
+
+
+  <view class="orderDatails-orderNumber">
+    <view class="left">
+      订单号:
+    </view>
+    <view class="right">
+        {{ datas.activityId}}
+    </view>
+  </view>
+  <view class="orderDatails-orderNumber">
+    <view class="left">
+      举办人:
+    </view>
+    <view class="right">
+    {{ datas.organizer}}
+    </view>
+  </view>
+  <view class="orderDatails-orderNumber">
+    <view class="left">
+      联系方式:
+    </view>
+    <view class="right">
+      {{datas.telephone}}
+    </view>
+  </view>
+
+
+  <view class="orderDatails-orderNumber">
+    <view class="left">
+      酒店地址:
+    </view>
+    <view class="right">
+      {{ datas.hostingAddress}}
+    </view>
+    <image style="width:24rpx;margin:24rpx 0 0 24rpx;" src="/images/orderIndex/address.png" mode="widthFix" />
+  </view>
+
+  <view class="orderDatails-orderNumber"  wx:if="{{datas.wineAdress}}">
+    <view class="left">
+      配酒地址:
+    </view>
+    <view class="right">
+      {{datas.wineAdress}}
+    </view>
+    <image style="width:24rpx;margin:24rpx 0 0 24rpx;" src="/images/orderIndex/address.png" mode="widthFix" />
+  </view>
+
+
+
+</view>

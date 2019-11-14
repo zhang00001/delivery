@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Details":"../../components/details/details"
+  },
+  "navigationBarTitleText": "订单准备中"
+}

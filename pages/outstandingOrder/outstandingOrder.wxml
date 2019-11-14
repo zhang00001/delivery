@@ -1,0 +1,134 @@
+<!--tab栏-->
+<view class="tab">
+	<view class="tab-left" data-index="1" bindtap="switcherFn">
+		<view class="{{!tabBl?'tab-left-one':'tab-color'}}">
+			邀请二维码
+		</view>
+		<view class="{{!tabBl?'tab-left-two':'tab-bgc'}}">
+		</view>
+	</view>
+	<view class="tab-right" data-index="2" bindtap="switcherFn">
+		<view class="{{tabBl?'tab-right-one':'tab-color'}}">
+			订单详情
+		</view>
+		<view class="{{tabBl?'tab-right-two':'tab-bgc'}}">
+		</view>
+	</view>
+</view>
+
+<view style="height:100rpx;">
+</view>
+
+<!--订单进行中-->
+<!-- 订单进行中-->
+<block wx:if="{{!tabBl}}">
+<view class="outstandingOrder-body">
+	<view class="outstandingOrder-details">
+		<view class="outstandingOrder-title">
+			详情
+		</view>
+		<view class="distribution-number">
+			<view class="left">
+				配送数量:
+			</view>
+			<view class="right" >
+				<view style="height:auto!important"> 
+          <view style="margin-bottom:10rpx" wx:for="{{initdata}}">{{item.productName}}:{{item.num}}瓶</view>
+				</view>
+			</view>
+		</view>
+		<view class="residue-number">
+			<view class="left">
+				剩余数量:
+			</view>
+			<view class="right">
+				<view class="right-input"  wx:for="{{initdata}}">
+					<view>
+					{{item.productName}}:
+					</view>
+					<input class="" value="" bindinput="getOvalue" data-index="{{index}}" placeholder="请输入瓶数" />
+				</view>
+				<!-- <view class="right-input">
+					<view>
+						B酒
+					</view>
+					<input class="" value="" placeholder="请输入瓶数" />
+				</view> -->
+			</view>
+		</view>
+		<view class="damage-number">
+			<view class="left">
+				损坏数量:
+			</view>
+			<view class="right">
+				<view class="right-input"  wx:for="{{initdata}}">
+					<view>
+							{{item.productName}}:
+					</view>
+					<input class="" value="" bindinput="getNvalue" data-index="{{index}}" placeholder="请输入瓶数" />
+				</view>
+				<!-- <view class="right-input">
+					<view>
+						B酒
+					</view>
+					<input class="" value="" placeholder="请输入瓶数" />
+				</view> -->
+			</view>
+		</view>
+		<view class="damage-img">
+			<view class="damage-img-title">
+				损坏照片(如有酒损坏照片请上传)
+			</view>
+			<view class="damage-img-uploading">
+				<view class="img-image-box" wx:for="{{imglist}}" >
+					<image class="img-image" mode="scaleToFill" src="{{item}}" />
+					<view class="img-image-del">
+						<image src="/images/orderIndex/del.png" data-index="{{index}}" bindtap="remimg" mode="scaleToFill" />
+					</view>
+				</view>
+				<view class="img-uploading" bindtap="addImage">
+					<image class="" src="/images/orderIndex/add.png" mode="scaleToFill" />
+				</view>
+			</view>
+		</view>
+	</view>
+  <!--底部-->
+	<view class="outstandingOrder-footer">
+  <!--completeColor 根据表单是否填写完成来确定按钮是否显示-->
+		<view bindtap="alertShow">
+			结单返仓
+		</view>
+	</view>
+   	<!--弹框确认-->
+	<view class="showModal" wx:if="{{showModalBl}}">
+		<view class="showModal-body">
+			<view class="showModal-title">
+				确定结单信息
+			</view>
+			<view>
+				<view class="showModal-time">
+				剩余:（<text wx:for="{{initdata}}" data-index="{{index}}">{{item.productName}}{{uplist[index].wineNum}}瓶，</text>)
+				</view>
+				<view class="showModal-address">
+				损坏:（<text wx:for="{{initdata}}" data-index="{{index}}">{{item.productName}}{{uplist[index].damageWineNum}}瓶，</text>)
+				</view>
+			</view>
+			<view class="showModal-footer">
+				<view bindtap="cancel">
+					取消
+				</view>
+				<view bindtap="confirm">
+					确认
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+</block>
+<!--二维码-->
+<block wx:else>
+<view style="display: flex; justify-content: center; margin-top: 30%; ">
+<image src="{{imgurl}}" style="width: 300px; height: 300px; "></image>
+</view>
+
+</block>

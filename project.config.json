@@ -1,0 +1,126 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.1",
+	"appid": "wxa3d1412f707b6ddf",
+	"projectname": "deliverMan",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "帮助",
+					"pathName": "pages/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "订单分类",
+					"pathName": "pages/orderIndex/orderIndex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "抢单 订单详情",
+					"pathName": "pages/orderDetails/orderDatails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "已完成订单详情",
+					"pathName": "pages/orderHistory/orderHistory",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单准备中",
+					"pathName": "pages/prepare/prepare",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提货确认页面",
+					"pathName": "pages/pickGoods/pickGoods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单进行中",
+					"pathName": "pages/orderUnderway/orderUnderway",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "待结订单详情",
+					"pathName": "pages/outstandingOrder/outstandingOrder",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

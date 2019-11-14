@@ -1,0 +1,166 @@
+.orderHistory {
+  width                 : 100vw;
+  height                : 100vh;
+  // height             : 100%;
+  background-color      : #F8F8F8;
+
+  .orderHistory-body {
+    margin          : 0 30rpx;
+    background-color: #fff;
+    padding         : 20rpx 20rpx;
+    border-radius   : 10px;
+  }
+
+  .orderHistory-form {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    height         : 58rpx;
+    padding        : 30rpx 0;
+    font-size      : 30rpx;
+    font-family    : PingFang SC;
+    font-weight    : 500;
+    color          : rgba(51, 51, 51, 1);
+    line-height    : 58rpx;
+
+    .orderHistory-form-left {
+      display    : flex;
+      align-items: center;
+
+      .orderHistory-form-circle {
+        width        : 24rpx;
+        height       : 24rpx;
+        border       : 2rpx solid rgba(51, 51, 51, 1);
+        border-radius: 50%;
+        margin-right : 24rpx;
+      }
+
+      .borderColor {
+        background-color: rgba(163, 38, 53, 1);
+        border-color    : rgba(163, 38, 53, 1);
+      }
+
+      .fontColor {
+        color: rgba(163, 38, 53, 1);
+      }
+    }
+
+    .orderHistory-form-right {
+      width      : 24rpx;
+      height     : 24rpx;
+      transform  : rotate(225deg);
+      border-top : 2rpx solid rgba(51, 51, 51, 1);
+      border-left: 2rpx solid rgba(51, 51, 51, 1);
+    }
+
+    .arrowsColor {
+      border-color: rgba(163, 38, 53, 1);
+      transform   : rotate(45deg);
+    }
+
+  }
+
+  // 订单详情
+  .orderHistory-details {
+    .left {
+      display      : flex;
+      height       : 28rpx;
+      font-size    : 28rpx;
+      font-family  : PingFang SC;
+      font-weight  : 500;
+      color        : rgba(102, 102, 102, 1);
+      line-height  : 28rpx;
+      margin-bottom: 30rpx;
+
+      view:first-child {
+        width: 150rpx;
+      }
+    }
+
+    .left:first-child {
+      margin-top: 30rpx;
+    }
+  }
+
+  // 宴会详情
+  .orderHistory-feast {
+    .feast {
+      display      : flex;
+      font-size    : 28rpx;
+      font-family  : PingFang SC;
+      font-weight  : 500;
+      color        : rgba(102, 102, 102, 1);
+      line-height  : 28rpx;
+      margin-bottom: 30rpx;
+
+      view:first-child {
+        width: 150rpx;
+      }
+    }
+
+    .feast:first-child {
+      margin-top: 30rpx;
+    }
+
+    .feast-img {
+      display        : flex;
+      justify-content: space-between;
+      margin-bottom  : 30rpx;
+
+      image {
+        width: 288rpx;
+      }
+    }
+  }
+
+  // 消耗详情
+  .orderHistory-expend {
+    .expend {
+      display      : flex;
+      height       : 28rpx;
+      font-size    : 28rpx;
+      font-family  : PingFang SC;
+      font-weight  : 500;
+      color        : rgba(102, 102, 102, 1);
+      line-height  : 28rpx;
+      margin-bottom: 30rpx;
+
+      view {
+        flex: 1;
+      }
+    }
+
+    .expend:first-child {
+      margin-top: 30rpx;
+    }
+
+    .expend-img {
+      display        : flex;
+      justify-content: space-between;
+      margin-bottom  : 30rpx;
+
+      image {
+        width: 288rpx;
+        height: 162rpx;
+      }
+    }
+  }
+
+  // 结单详情
+  .orderHistory-end {
+    .end {
+      display    : flex;
+      height     : 28rpx;
+      font-size  : 28rpx;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color      : rgba(102, 102, 102, 1);
+      line-height: 28rpx;
+      margin     : 30rpx 0;
+
+      view:first-child {
+        width: 150rpx;
+      }
+    }
+  }
+}

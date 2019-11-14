@@ -1,0 +1,131 @@
+.orderHistory {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F8F8F8;
+}
+.orderHistory .orderHistory-body {
+  margin: 0 30rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  border-radius: 10px;
+}
+.orderHistory .orderHistory-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58rpx;
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 58rpx;
+}
+.orderHistory .orderHistory-form .orderHistory-form-left {
+  display: flex;
+  align-items: center;
+}
+.orderHistory .orderHistory-form .orderHistory-form-left .orderHistory-form-circle {
+  width: 24rpx;
+  height: 24rpx;
+  border: 2rpx solid #333333;
+  border-radius: 50%;
+  margin-right: 24rpx;
+}
+.orderHistory .orderHistory-form .orderHistory-form-left .borderColor {
+  background-color: #a32635;
+  border-color: #a32635;
+}
+.orderHistory .orderHistory-form .orderHistory-form-left .fontColor {
+  color: #a32635;
+}
+.orderHistory .orderHistory-form .orderHistory-form-right {
+  width: 24rpx;
+  height: 24rpx;
+  transform: rotate(225deg);
+  border-top: 2rpx solid #333333;
+  border-left: 2rpx solid #333333;
+}
+.orderHistory .orderHistory-form .arrowsColor {
+  border-color: #a32635;
+  transform: rotate(45deg);
+}
+.orderHistory .orderHistory-details .left {
+  display: flex;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+}
+.orderHistory .orderHistory-details .left view:first-child {
+  width: 150rpx;
+}
+.orderHistory .orderHistory-details .left:first-child {
+  margin-top: 30rpx;
+}
+.orderHistory .orderHistory-feast .feast {
+  display: flex;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+}
+.orderHistory .orderHistory-feast .feast view:first-child {
+  width: 150rpx;
+}
+.orderHistory .orderHistory-feast .feast:first-child {
+  margin-top: 30rpx;
+}
+.orderHistory .orderHistory-feast .feast-img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+  flex-wrap: wrap;
+
+}
+.orderHistory .orderHistory-feast .feast-img image {
+  width: 288rpx;
+}
+.orderHistory .orderHistory-expend .expend {
+  display: flex;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 28rpx;
+  margin-bottom: 30rpx;
+}
+.orderHistory .orderHistory-expend .expend view {
+  flex: 1;
+}
+.orderHistory .orderHistory-expend .expend:first-child {
+  margin-top: 30rpx;
+}
+.orderHistory .orderHistory-expend .expend-img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.orderHistory .orderHistory-expend .expend-img image {
+  width: 288rpx;
+  height: 162rpx;
+}
+.orderHistory .orderHistory-end .end {
+  display: flex;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 28rpx;
+  margin: 30rpx 0;
+}
+.orderHistory .orderHistory-end .end view:first-child {
+  width: 150rpx;
+}

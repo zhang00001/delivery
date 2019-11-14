@@ -1,0 +1,234 @@
+<!--tab栏-->
+<view class="tab">
+  <view class="tab-left" data-index="1" bindtap="switcherFn">
+    <view class="{{!tabBl?'tab-left-one':'tab-color'}}">
+      邀请二维码
+    </view>
+    <view class="{{!tabBl?'tab-left-two':'tab-bgc'}}">
+    </view>
+  </view>
+  <view class="tab-right" data-index="2" bindtap="switcherFn">
+    <view class="{{tabBl?'tab-right-one':'tab-color'}}">
+      订单详情
+    </view>
+    <view class="{{tabBl?'tab-right-two':'tab-bgc'}}">
+    </view>
+  </view>
+</view>
+
+<view style="height:100rpx;">
+</view>
+
+<!-- 订单进行中-->
+<block wx:if="{{!tabBl}}">
+  <view style="padding-bottom:110rpx;">
+    <scroll-view scroll-y class="orderUnderway">
+      <view style="height:30rpx;" />
+      <view class="orderUnderway-body">
+        <!--订单详情 标题-->
+        <view class="orderUnderway-form" bindtap="pullDownShowDetails">
+          <view class="orderUnderway-form-left">
+            <view class="orderUnderway-form-circle {{!detailsBl?'borderColor':''}}" />
+            <view class="orderUnderway-form-arrows  {{!detailsBl?'fontColor':''}}">
+              订单详情
+            </view>
+          </view>
+          <view class="orderUnderway-form-right  {{!detailsBl?'arrowsColor':''}}" />
+        </view>
+        <!-- 订单详情 -->
+        <view class="orderUnderway-details" hidden="{{detailsBl}}">
+          <view class="left">
+            <view>
+              订单号:
+            </view>
+            <view>
+               {{initdata.activityId}}
+            </view>
+          </view>
+          <view class="left">
+            <view>
+              举办人:
+            </view>
+            <view>
+               {{initdata.organizer}}
+            </view>
+
+          </view>
+          <view class="left">
+            <view>
+              联系方式:
+            </view>
+            <view>
+               {{initdata.telephone}}
+            </view>
+
+          </view>
+          <view class="left">
+            <view>
+              举办时间:
+            </view>
+            <view>
+              {{initdata.hostingTime}}
+            </view>
+          </view>
+          <view class="left">
+            <view>
+              酒店名字:
+            </view>
+            <view>
+               {{initdata.placeName}}
+            </view>
+          </view>
+          <view class="left">
+            <view>
+              举办地址:
+            </view>
+            <view>
+               {{initdata.hostingAddress}}
+            </view>
+            <image style="width:24rpx;margin-left:24rpx;" src="/images/orderIndex/address.png" mode="widthFix" />
+          </view>
+          <view class="left">
+            <view>
+              配酒公司:
+            </view>
+            <view>
+               {{initdata.companyName}}
+            </view>
+          </view>
+          <view class="left">
+            <view>
+              配酒地址:
+            </view>
+            <view>
+               {{initdata.wineAdress}}
+            </view>
+            <image style="width:24rpx;margin-left:24rpx;" src="/images/orderIndex/address.png" mode="widthFix" />
+          </view>
+          <view class="left">
+            <view>
+              配酒数量:
+            </view>
+            <view>
+               <text wx:for="{{initdata.wineSkuList}}" style="margin-right:10rpx">{{item}}瓶 </text> 
+            </view>
+          </view>
+        </view>
+        <view style="border:1rpx solid rgba(234,234,234,1)" />
+        <!--资料详情 标题-->
+        <view class="orderUnderway-form" bindtap="pullDownShowFeast">
+          <view class="orderUnderway-form-left">
+            <view class="orderUnderway-form-circle  {{!dataBl?'borderColor':''}}" />
+            <view class="orderUnderway-form-arrows  {{!dataBl?'fontColor':''}}">
+              资料详情(填写)
+            </view>
+          </view>
+          <view class="orderUnderway-form-right {{!dataBl?'arrowsColor':''}}" />
+        </view>
+        <!--资料详情-->
+        <view class="orderUnderway-data" hidden="{{dataBl}}">
+          <view class="people-number">
+            <view style="color:rgba(163,38,53,1);">
+              *
+            </view>
+            <view class="people-number-title">
+              活动人数
+            </view>
+            <input class="people-number-input"  bindinput="setpeopleNum" placeholder="请输入" />
+          </view>
+          <view class="table-number">
+            <view style="color:rgba(163,38,53,1);">
+              *
+            </view>
+            <view class="table-number-title">
+              活动桌数
+            </view>
+            <input class="table-number-input" type="number" bindinput="settableNum" placeholder="请输入" />
+          </view>
+          <view class="img">
+            <view style="color:rgba(163,38,53,1);">
+              *
+            </view>
+            <view class="img-title">
+              现场照片
+            </view>
+          </view>
+          <view class="img-imageArr">
+            <view class="img-image-box"  wx:for="{{imglist}}">
+              <image class="img-image" mode="scaleToFill" src="{{item}}" />
+              <view class="img-image-del">
+                <image src="/images/orderIndex/del.png" data-index="{{index}}" bindtap="remimg" mode="scaleToFill" />
+              </view>
+            </view>
+            <!-- <view class="img-image-box">
+              <image class="img-image" mode="scaleToFill" src="http://img1.imgtn.bdimg.com/it/u=348840611,3702053108&fm=26&gp=0.jpg" />
+              <view class="img-image-del">
+                <image src="/images/orderIndex/del.png" mode="scaleToFill" />
+              </view>
+            </view>
+            <view class="img-image-box">
+              <image class="img-image" mode="scaleToFill" src="http://img1.imgtn.bdimg.com/it/u=348840611,3702053108&fm=26&gp=0.jpg" />
+              <view class="img-image-del">
+                <image src="/images/orderIndex/del.png" mode="scaleToFill" />
+              </view>
+            </view> -->
+            <view class="img-uploading" bindtap="addImage">
+              <image class="" src="/images/orderIndex/add.png" mode="scaleToFill" />
+            </view>
+          </view>
+          <view class="remark">
+            <view class="remark-title">
+              填写备注
+            </view>
+            <textarea class="remark-text" value="" bindinput="setremark"  maxlength="300" placeholder="请填写内容" />
+          </view>
+        </view>
+        <view style="border:1rpx solid rgba(234,234,234,1)" />
+      </view>
+    </scroll-view>
+    <view class="orderUnderway-footer">
+      <!--填写完成 添加类名completeColor-->
+      <view  style="background:#a32635;color:#fff" bindtap="alertShow"
+       wx:if="{{peopleNum!=''&&tableNum!=''&&imglist.length!=0}}">
+        信息填写完成
+      </view>
+       <view class=""
+       wx:if="{{peopleNum==''||tableNum==''||imglist.length==0}}">
+        信息填写完成
+      </view>
+    </view>
+    <!--弹框确认-->
+    <view class="showModal" wx:if="{{showModalBl}}">
+      <view class="showModal-body">
+        <view class="showModal-title">
+          抢单信息
+        </view>
+        <view>
+          <view class="showModal-time">
+            活动人数({{peopleNum}}人)
+          </view>
+          <view class="showModal-address">
+            活动桌数({{tableNum}}桌)
+          </view>
+          <view class="showModal-site">
+            备注({{remark}})
+          </view>
+        </view>
+        <view class="showModal-footer">
+          <view bindtap="cancel">
+            取消
+          </view>
+          <view bindtap="confirm">
+            确认
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<!--二维码-->
+<block wx:else>
+ <view style="display: flex; justify-content: center; margin-top: 30%; ">
+<image src="{{imgurl}}" style="width: 300px; height: 300px; "></image>
+</view>
+</block>

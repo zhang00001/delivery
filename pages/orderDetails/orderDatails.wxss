@@ -1,0 +1,131 @@
+.orderDatails {
+  width: 100%;
+  height: 100vh;
+  padding-top: 15px;
+  background-color: #f8f8f8;
+}
+
+.orderDatails-data {
+  padding: 10px;
+  margin: 0 15px 15px;
+  background-color: #fff;
+}
+
+.orderDatails-data > view {
+  display: flex;
+}
+
+.orderDatails-data > view view {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666;
+  margin-top: 30rpx;
+}
+
+.orderDatails-data > view view:first-child {
+  width: 170rpx;
+}
+
+.orderDatails-title {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333;
+}
+
+.orderDatails-footer {
+  position: fixed;
+  left: 0;
+  bottom: 10rpx;
+  width: 100%;
+  height: 108rpx;
+  background-color: #fff;
+  padding: 15rpx 0;
+}
+
+.orderDatails-footer button {
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  background: #a32635;
+  border-radius: 20rpx;
+  color: #fff;
+}
+
+.showModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.showModal .showModal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600rpx;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.showModal .showModal-title {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  text-align: center;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333;
+  margin: 40rpx 0;
+}
+
+.showModal .showModal-time, .showModal .showModal-address,
+.showModal .showModal-site {
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666;
+  margin: 0 80rpx 30rpx;
+}
+
+.showModal .showModal-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 104rpx;
+  border-top: 2rpx solid #eaeaea;
+  font-size: 34rpx;
+}
+
+.showModal .showModal-footer view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.showModal .showModal-footer view:first-child {
+  font-family: PingFang SC;
+  color: #999;
+  border-right: 2rpx solid #eaeaea;
+}
+
+.showModal .showModal-footer view:last-child {
+  font-family: PingFang SC;
+  color: #a32635;
+}

@@ -1,0 +1,261 @@
+
+<!--订单 公海  已完成订单-->
+<view class='orderIndex-wrapper'>
+  <view class='header-wrapper flex'>
+    <view class='line' style="left:{{left}}rpx"></view>
+    <view class='portrait-wrapper flex' bindtap="goHideShow">
+      <image src='/images/orderIndex/threePoint.png'></image>
+      <image class='portrait' src='{{user.avatarUrl}}'></image>
+    </view>
+    <view class='option-wrapper flex' bindtap="selectOption" data-index="0"><text class="{{currentIdx=='0'?'active':''}}" >订单公海</text></view>
+    <view class='option-wrapper flex' bindtap="selectOption" data-index="1"><text class="{{currentIdx=='1'?'active':''}}" >完成订单</text></view>
+  </view>
+  <scroll-view class="scroll-view-one" style="height:60vh" scroll-y bindscrolltolower="fn">
+    <view class='list-wrapper' wx:if="{{hasList}}">
+     <view class='accept-list' wx:if="{{currentIdx=='0'}}">
+      <view class='item flex'>  <view data-id="1" class="right-btn"  bindtap="skipDetails" >抢单</view>
+        <view class='item-top flex' style="margin-top:20px" wx:for="{{acceptList}}">
+          <view class='item-top-left flex' >
+            <view class='location flex'>
+              <image src="/images/orderIndex/location.png"></image>
+              <text>{{item.startingPoint}}</text>
+            </view>
+            <view class='circle-wrapper'>
+              <view class='circle'></view>
+              <view class='circle'></view>
+            </view>
+            <view class='location flex'>
+              <image src="/images/orderIndex/location.png"></image>
+              <text>{{item.destination}}</text>
+            </view>
+            
+          </view>
+          <view class='item-top-right flex'>
+            <view data-id="{{item.activityId}}" class="right-btn"  bindtap="skipDetails" >抢单</view>
+          </view>
+        </view>
+        <view class='item-bottom flex'>
+          <image src="/images/orderIndex/time.png"></image>
+          <text>{{item.activityStartTime}}</text>
+        </view>
+      </view>
+     </view>
+     <view wx:else class='complete-list'>
+      <view class='column' wx:for="{{completeList}}" >
+        <view class='column-top flex'  bindtap="skipDetails" data-id="{{item.activityId}}" data-index="{{item.activityId}}">
+          <view class='column-top-top'>
+            <image src="/images/orderIndex/build.png"></image>
+            <text>{{item.companyName}}</text>
+          </view>
+          <view class='column-top-bottom'>
+            <image src="/images/orderIndex/time.png"></image>
+            <text>{{item.returnTime}}</text>
+          </view>
+        </view>
+        <view class='column-bottom flex'>
+          <view class='column-bottom-left'>订单: {{item.activityId}}</view>
+          <view class='column-bottom-right'>订单状态</view>
+        </view>
+      </view>
+      <!-- <view class='column'>
+        <view class='column-top flex'>
+          <view class='column-top-top'>
+            <image src="/images/orderIndex/build.png"></image>
+            <text>黄埔区萝岗酒店</text>
+          </view>
+          <view class='column-top-bottom'>
+            <image src="/images/orderIndex/time.png"></image>
+            <text>2019/09/09 15:36</text>
+          </view>
+        </view>
+        <view class='column-bottom flex'>
+          <view class='column-bottom-left'>订单: 123456789</view>
+          <view class='column-bottom-right'>订单状态</view>
+        </view>
+      </view> -->
+     </view>
+     </view>
+     <view class='placeholder-wrapper flex' wx:else>
+      <image src="/images/orderIndex/default.png"></image>
+      <text>暂无可抢订单</text>
+    </view> 
+  </scroll-view>
+  <!--左部用户信息-->
+  <view class='user-wrapper' wx:if="{{showUser}}" catchtap="goHideShow">
+    <view class="user flex" style="left:{{userLeft}}rpx">
+      <view class='user-top flex'>
+        <view class='user-top-left'>
+          <image src='{{user.avatarUrl}}'></image>
+        </view>
+        <view class='user-top-right flex' >
+          <view class='userName'>用户名: {{user.nickName}}</view>
+          <view class='userAccount'>账号: {{user.nickName}}</view>
+        </view>
+      </view>
+      <view class='user-bottom flex' bindtap="outlogin">
+        <image src='/images/orderIndex/quit.png'></image>
+        <text>退出登录</text>
+      </view>
+    </view>
+  </view>
+  <!--底部抢单列表-->
+  <view class='alert-wrapper {{isShowAlert?"show":""}}'>
+    <view class='alert-header flex'> 
+      <view class='header-left'></view>
+      <view class='header-center flex' catchtap='goShowAlert'>
+        <view class='line'></view>
+      </view>
+      <view class='header-right flex' bindtap="jumpHelp"><text>帮助</text></view>
+    </view>
+    <view class='alert-list-wrapper'>
+      <view class='alert-title'>抢单列表</view>
+      <scroll-view  class="scroll-view-two" scroll-y>
+       <view class='alert-list'>
+         <view class='alert-item' wx:for="{{GrabSingleList}}" wx:key="{{item.activityId}}"  >
+          <view class='alert-item-top flex'>
+         
+            <view class='top-status flex first' wx:if="{{item.orderStatus==4}}">待配货</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==5}}">待提货</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==6}}">进行中</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==7}}">结算退回</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==61}}">待结订单</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==8}}">结算审核中</view>
+            <view class='top-status flex first' wx:if="{{item.orderStatus==9}}">完成订单</view>
+          </view>
+          <view class='alert-item-bottom flex'  data-index="{{item.activityId}}" data-status="{{item.orderStatus}}" bindtap="jumpToPrepare">
+            <view class='alert-item-bottom-left flex'>
+              <view class='flex'>
+                <image src="/images/orderIndex/location.png"></image>
+                <text>{{item.destination}}</text>
+              </view>
+              <view class='flex'>
+                <image src="/images/orderIndex/time.png"></image>
+                <text>{{item.activityStartTime}}</text>
+              </view>
+            </view>
+            <view class='alert-item-bottom-right'>
+              <image src='/images/orderIndex/rightArrow.png'></image>
+            </view>
+          </view>
+         </view>
+         <!-- <view class='alert-item'>
+          <view class='alert-item-top flex' >
+            <view class='top-status flex'  >提货确认单</view>
+          </view>
+          <view class='alert-item-bottom flex'>
+            <view class='alert-item-bottom-left flex'  bindtap="jumpToPickGoods">
+              <view>
+                <image src="/images/orderIndex/location.png"></image>
+                <text>白云配送公司</text>
+              </view>
+              <view>
+                <image src="/images/orderIndex/time.png"></image>
+                <text>2019/09/09 15:55</text>
+              </view>
+            </view>
+            <view class='alert-item-bottom-right'>
+              <image src='/images/orderIndex/rightArrow.png'></image>
+            </view>
+          </view>
+         </view>
+         <view class='alert-item'>
+          <view class='alert-item-top flex'>
+            <view class='top-status flex'>进行中订单</view>
+          </view>
+          <view class='alert-item-bottom flex'>
+            <view class='alert-item-bottom-left flex' bindtap="jumpToOrderUnderWay" >
+              <view>
+                <image src="/images/orderIndex/location.png"></image>
+                <text>白云配送公司</text>
+              </view>
+              <view>
+                <image src="/images/orderIndex/time.png"></image>
+                <text>2019/09/09 15:55</text>
+              </view>
+            </view>
+            <view class='alert-item-bottom-right'>
+              <image src='/images/orderIndex/rightArrow.png'></image>
+            </view>
+          </view>
+         </view>
+         <view class='alert-item'>
+          <view class='alert-item-top flex'>
+            <view class='top-status flex'>待结订单</view>
+          </view>
+          <view class='alert-item-bottom flex'>
+            <view class='alert-item-bottom-left flex' bindtap="jumpToOutstandingOrder">
+              <view>
+                <image src="/images/orderIndex/location.png"></image>
+                <text>白云配送公司</text>
+              </view>
+              <view>
+                <image src="/images/orderIndex/time.png"></image>
+                <text>2019/09/09 15:55</text>
+              </view>
+            </view>
+            <view class='alert-item-bottom-right'>
+              <image src='/images/orderIndex/rightArrow.png'></image>
+            </view>
+          </view>
+         </view>
+         <view class='alert-item'>
+          <view class='alert-item-top flex'>
+            <view class='top-status flex'>订单状态</view>
+          </view>
+          <view class='alert-item-bottom flex'>
+            <view class='alert-item-bottom-left flex'>
+              <view>
+                <image src="/images/orderIndex/location.png"></image>
+                <text>白云配送公司</text>
+              </view>
+              <view>
+                <image src="/images/orderIndex/time.png"></image>
+                <text>2019/09/09 15:55</text>
+              </view>
+            </view>
+            <view class='alert-item-bottom-right'>
+              <image src='/images/orderIndex/rightArrow.png'></image>
+            </view>
+          </view>
+         </view> -->
+       </view>
+     </scroll-view>
+    </view>
+  </view>
+  <!--弹框接收派送任务-->
+  <view class='distribute-wrapper' wx:if="{{isShowDistribute}}">
+    <view class='distribute'>
+      <view class='content-wrapper flex' wx:if="{{!isShowNext}}">
+        <view class='title flex'>派送任务类型</view>
+        <view class='content'>
+          <view class='content-column flex'>
+            <view>举办时间:</view>
+            <view class='content-column-text'>2019/09/09 15:22</view>
+          </view>
+          <view class='content-column flex'>
+            <view>举办地址:</view>
+            <view class='content-column-text'>白云区汇金广场白云区汇金广场</view>
+          </view>
+          <view class='content-column flex'>
+            <view>配酒地址:</view>
+            <view class='content-column-text'>白云配酒公司</view>
+          </view>
+        </view>
+        <view class='btn-wrapper flex'>
+          <view class='btn gray flex' bindtap="goNextCancel">取消</view>
+          <view class='btn red flex' bindtap='goAcceptDistribute'>确定</view>
+        </view>
+      </view>
+      <view class='content-wrapper cancel-wrapper flex' wx:else>
+        <view class='title flex'>取消订单</view>
+        <view class='content'>
+          <textarea placeholder="请编辑取消订单的原因(必填)" bindinput="goFillReason"></textarea>
+        </view>
+        <view class='btn-wrapper flex'>
+          <view class='btn gray flex' bindtap="goNextCancel">取消</view>
+          <view class='btn red flex' bindtap="goCancelDistribute">确定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

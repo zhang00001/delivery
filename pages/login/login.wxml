@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class='login-wrapper'>
+  <view class='banner-wrapper flex'>
+    <view class='banner flex'>送货员</view>
+  </view>
+  <view class='input-wrapper'>
+    <view class='input account-input flex'>
+      <view class='img-wrapper flex'>
+        <image class="phone-icon" src="/images/login/phone.png"></image>
+      </view>
+        <input placeholder='请输入后台分配的账号' type='number' bindinput="getPhone"></input>      
+    </view>
+    <view class='input code-input flex'>
+      <view class='img-wrapper flex'>
+        <image class="email-icon" src="/images/login/email.png"></image>
+      </view>
+        <input placeholder='请输入验证码'  type='number' bindinput="getCode"></input>
+        <view class='sendCode' wx:if="{{canClick}}" bindtap="sendCode">{{sendText}}</view>
+        <view class='not-send sendCode' wx:else>发送中{{countdown}}</view>
+    </view>
+  </view>
+  <view class='btn-wrapper'>
+    <view class='btn' bindtap="confirm" wx:if="{{phone && code}}">绑定</view>
+    <view class='btn notBtn' bindtap="showToast" wx:else >绑定</view>
+  </view>
+</view>

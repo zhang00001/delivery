@@ -1,0 +1,109 @@
+<!--订单详情 抢单-->
+<view class="orderDatails">
+	<!-- 详情信息-->
+	<view class="orderDatails-data">
+		<view class="orderDatails-title">
+			详情
+		</view>
+		<view class="orderDatails-orderNumber" wx:if='orderDetail' >
+			<view>
+				订单号:
+			</view>
+			<view>
+				{{orderDetail.activityId}}
+			</view>
+		</view>
+		<view>
+			<view>
+				举办人:
+			</view>
+			<view>
+				{{orderDetail.organizer}}
+			</view>
+		</view>
+		<view>
+			<view>
+				联系方式:
+			</view>
+			<view>
+				{{orderDetail.telephone}}
+			</view>
+		</view>
+		<view>
+			<view>
+				举办时间:
+			</view>
+			<view>
+					{{orderDetail.hostingTime}}
+			</view>
+		</view>
+		<view>
+			<view>
+				酒店名字:
+			</view>
+			<view>
+						{{orderDetail.companyName}}
+			</view>
+		</view>
+		<view>
+			<view>
+				举办地址:
+			</view>
+      	<view>
+								<image style="width:24rpx" src="/images/orderIndex/address.png" mode="widthFix" />	{{orderDetail.hostingAddress}}
+			</view>
+		</view>
+		<view>
+			<view>
+				配酒公司:
+			</view>
+			<view>
+				{{orderDetail.companyName}}
+			</view>
+		</view>
+		<view>
+			<view>
+				配酒地址:
+			</view>
+			<view>
+      <image style="width:24rpx;" src="/images/orderIndex/address.png" mode="widthFix" />
+				<!-- 广州市白云区白云街555号 -->{{orderDetail.wineAdress}}
+			</view>
+			
+		</view>
+	</view>
+	<!--按钮-->
+	<view class="orderDatails-footer">
+		<button bindtap="alertShow">
+			确定抢单
+		</button>
+	</view>
+	<!--弹框确认-->
+	<view class="showModal" wx:if="{{showModalBl}}">
+		<view class="showModal-body">
+			<view class="showModal-title">
+				抢单信息
+			</view>
+			<view>
+				<view class="showModal-time">
+					举办时间:	{{orderDetail.hostingTime}}
+				</view>
+				<view class="showModal-address">
+					举办地址:	{{orderDetail.hostingAddress}}
+				</view>
+				<view class="showModal-site">
+					配酒地址:{{orderDetail.wineAdress}}
+				</view>
+			</view>
+			<view class="showModal-footer">
+				<view bindtap="cancel">
+					取消
+				</view>
+				<view bindtap="confirm">
+					确认
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+

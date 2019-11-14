@@ -1,0 +1,323 @@
+page {
+  background-color: #f4f4f4;
+}
+.tab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  box-shadow: 0px 0px 20px 0px rgba(102, 102, 102, 0.1);
+}
+.tab .tab-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab .tab-left .tab-left-one {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.tab .tab-left .tab-left-two {
+  width: 70rpx;
+  height: 10rpx;
+  border-radius: 4rpx;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+.tab .tab-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab .tab-right .tab-right-one {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.tab .tab-right .tab-right-two {
+  width: 70rpx;
+  height: 10rpx;
+  border-radius: 4rpx;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+.tab .tab-color {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #A32635;
+}
+.tab .tab-bgc {
+  width: 70rpx;
+  height: 10rpx;
+  border-radius: 4rpx;
+  margin-top: 10rpx;
+  background-color: #A32635;
+}
+.outstandingOrder-body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 30rpx 30rpx 110rpx 30rpx;
+}
+.outstandingOrder-body .outstandingOrder-details {
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+.outstandingOrder-title {
+  height: 29rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 29rpx;
+  margin-bottom: 30rpx;
+}
+.distribution-number {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.distribution-number .left {
+  width: 145rpx;
+  height: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 27rpx;
+}
+.distribution-number .right {
+  flex: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.distribution-number .right view {
+  height: 27rpx;
+  line-height: 27rpx;
+}
+.residue-number {
+  display: flex;
+}
+.residue-number .left {
+  width: 145rpx;
+  height: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 27rpx;
+}
+.residue-number .right {
+  flex: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.residue-number .right .right-input {  
+  margin-bottom: 30rpx;
+}
+.residue-number .right .right-input view {
+  margin-bottom: 10rpx;
+
+}
+.residue-number .right .right-input input {
+  width: 436rpx;
+  height: 60rpx;
+  background: #ffffff;
+  border: 1rpx solid #cccccc;
+  border-radius: 6rpx;
+  padding-left: 25rpx;
+}
+.damage-number {
+  display: flex;
+}
+.damage-number .left {
+  width: 145rpx;
+  height: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 27rpx;
+}
+.damage-number .right {
+  flex: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+.damage-number .right .right-input { 
+  margin-bottom: 30rpx;
+}
+.damage-number .right .right-input view {
+  margin-bottom: 10rpx
+}
+.damage-number .right .right-input input {
+  width: 436rpx;
+  height: 60rpx;
+  background: #ffffff;
+  border: 1rpx solid #cccccc;
+  border-radius: 6rpx;
+  padding-left: 25rpx;
+}
+.damage-img .damage-img-title {
+  height: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 27rpx;
+  margin-bottom: 30rpx;
+}
+.damage-img .damage-img-uploading {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.damage-img .img-image {
+  width: 288rpx;
+  height: 162rpx;
+}
+.damage-img .img-image-box {
+  position: relative;
+  width: 288rpx;
+  height: 162rpx;
+  margin: 15rpx;
+}
+.damage-img .img-image-box .img-image-del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: #ffffff;
+  opacity: 0.3;
+}
+.damage-img .img-image-box .img-image-del image {
+  width: 20rpx;
+  height: 20rpx;
+}
+.damage-img .img-uploading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 288rpx;
+  height: 162rpx;
+  margin: 15rpx;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+}
+.damage-img .img-uploading image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.outstandingOrder-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110rpx;
+  background: #ffffff;
+  box-shadow: 0px 0px 20rpx 0px rgba(102, 102, 102, 0.1);
+  padding: 15rpx 30rpx;
+}
+.outstandingOrder-footer view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #eaeaea;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+.outstandingOrder-footer .completeColor {
+  background: #a32635;
+  color: #fff;
+}
+.showModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+.showModal .showModal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding-bottom: 104rpx;
+}
+.showModal .showModal-title {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  text-align: center;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  margin: 40rpx 0;
+}
+.showModal .showModal-time,
+.showModal .showModal-address,
+.showModal .showModal-site {
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  padding: 0 80rpx 30rpx;
+}
+.showModal .showModal-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 104rpx;
+  border-top: 2rpx solid #eaeaea;
+  font-size: 34rpx;
+}
+.showModal .showModal-footer view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.showModal .showModal-footer view:first-child {
+  font-family: PingFang SC;
+  color: #999999;
+  border-right: 2rpx solid #eaeaea;
+}
+.showModal .showModal-footer view:last-child {
+  font-family: PingFang SC;
+  color: #a32635;
+}

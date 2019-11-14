@@ -1,0 +1,8 @@
+<!--订单准备中页面-->
+<view class="prepare-body">
+	<Details datas="{{goods}}" />
+	<view class="prepare-hint">
+		请到配酒公司取货
+	</view>
+</view>
+

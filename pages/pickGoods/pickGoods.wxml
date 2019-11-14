@@ -1,0 +1,33 @@
+<!-- 提货确认-->
+<view class="pickGoods-body">
+	<Details datas="{{goods}}"/>
+	<view class="pickGoods-footer">
+		<button bindtap="affirmNum">
+			确认提货单无误
+		</button>
+	</view>
+	 	<!--弹框确认-->
+	<view class="showModal" wx:if="{{showModalBl}}">
+		<view class="showModal-body">
+			<view class="showModal-title">
+				确认提货信息
+			</view>
+			<view>
+				<view class="showModal-time" wx:for="{{list}}">
+					{{item}}瓶
+				</view>
+				<!-- <view class="showModal-address">
+					A酒(150瓶)
+				</view> -->
+			</view>
+			<view class="showModal-footer">
+				<view bindtap="cancel">
+					取消
+				</view>
+				<view bindtap="confirm">
+					确认
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

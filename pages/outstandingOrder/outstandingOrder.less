@@ -1,0 +1,387 @@
+page {
+  background-color: rgb(244, 244, 244);
+}
+
+// tab栏
+.tab {
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  z-index         : 30;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  background-color: #fff;
+  width           : 100%;
+  height          : 100rpx;
+  box-shadow      : 0px 0px 20px 0px rgba(102, 102, 102, 0.1);
+
+  .tab-left {
+    flex          : 1;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    .tab-left-one {
+      font-size  : 30rpx;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color      : rgba(51, 51, 51, 1);
+    }
+
+    .tab-left-two {
+      width           : 70rpx;
+      height          : 10rpx;
+      border-radius   : 4rpx;
+      background-color: #fff;
+      margin-top      : 10rpx;
+    }
+  }
+
+  .tab-right {
+    flex          : 1;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    .tab-right-one {
+      font-size  : 30rpx;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color      : rgba(51, 51, 51, 1);
+    }
+
+    .tab-right-two {
+      width           : 70rpx;
+      height          : 10rpx;
+      border-radius   : 4rpx;
+      background-color: #fff;
+      margin-top      : 10rpx;
+    }
+  }
+
+  .tab-color {
+    font-size  : 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : #A32635;
+  }
+
+  .tab-bgc {
+    width           : 70rpx;
+    height          : 10rpx;
+    border-radius   : 4rpx;
+    margin-top      : 10rpx;
+    background-color: #A32635;
+  }
+}
+
+// 订单详情样式
+
+.outstandingOrder-body {
+  width           : 100vw;
+  height          : 100vh;
+  background-color: rgba(248, 248, 248, 1);
+  padding         : 30rpx 30rpx 110rpx 30rpx;
+
+  .outstandingOrder-details {
+    padding         : 20rpx;
+    background-color: #fff;
+    border-radius   : 8rpx;
+  }
+}
+
+.outstandingOrder-title {
+  height       : 29rpx;
+  font-size    : 30rpx;
+  font-family  : PingFang SC;
+  font-weight  : bold;
+  color        : rgba(51, 51, 51, 1);
+  line-height  : 29rpx;
+  margin-bottom: 30rpx;
+}
+
+// 详情
+.distribution-number {
+  display      : flex;
+  margin-bottom: 30rpx;
+
+  .left {
+    width      : 145rpx;
+    height     : 27rpx;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+    line-height: 27rpx;
+  }
+
+  .right {
+    flex       : 1;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+
+    view {
+      height     : 27rpx;
+      line-height: 27rpx;
+    }
+  }
+}
+
+.residue-number {
+  display: flex;
+
+  .left {
+    width      : 145rpx;
+    height     : 27rpx;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+    line-height: 27rpx;
+  }
+
+  .right {
+    flex       : 1;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+
+    .right-input {
+      display      : flex;
+      align-items  : center;
+      height       : 60rpx;
+      margin-bottom: 30rpx;
+
+      view {
+        height      : 26rpx;
+        line-height : 26rpx;
+        margin-right: 22rpx;
+      }
+
+      input {
+        width        : 436rpx;
+        height       : 60rpx;
+        background   : rgba(255, 255, 255, 1);
+        border       : 1rpx solid rgba(204, 204, 204, 1);
+        border-radius: 6rpx;
+        padding-left : 25rpx;
+      }
+    }
+
+  }
+}
+
+.damage-number {
+  display: flex;
+
+  .left {
+    width      : 145rpx;
+    height     : 27rpx;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+    line-height: 27rpx;
+  }
+
+  .right {
+    flex       : 1;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+
+    .right-input {
+      display      : flex;
+      align-items  : center;
+      height       : 60rpx;
+      margin-bottom: 30rpx;
+
+      view {
+        height      : 26rpx;
+        line-height : 26rpx;
+        margin-right: 22rpx;
+      }
+
+      input {
+        width        : 436rpx;
+        height       : 60rpx;
+        background   : rgba(255, 255, 255, 1);
+        border       : 1rpx solid rgba(204, 204, 204, 1);
+        border-radius: 6rpx;
+        padding-left : 25rpx;
+      }
+    }
+
+  }
+}
+
+.damage-img {
+  .damage-img-title {
+    height       : 27rpx;
+    font-size    : 28rpx;
+    font-family  : PingFang SC;
+    font-weight  : 500;
+    color        : rgba(102, 102, 102, 1);
+    line-height  : 27rpx;
+    margin-bottom: 30rpx;
+  }
+
+  .damage-img-uploading {
+    display: flex;
+  }
+
+  .img-image {
+    width : 288rpx;
+    height: 162rpx;
+  }
+
+  .img-image-box {
+    position: relative;
+    width   : 288rpx;
+    height  : 162rpx;
+    margin  : 15rpx;
+
+    .img-image-del {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      position       : absolute;
+      right          : 0rpx;
+      bottom         : 0rpx;
+      width          : 40rpx;
+      height         : 40rpx;
+      background     : rgba(255, 255, 255, 1);
+      opacity        : 0.3;
+
+      image {
+        width : 20rpx;
+        height: 20rpx;
+      }
+    }
+  }
+
+  .img-uploading {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+    width          : 288rpx;
+    height         : 162rpx;
+    margin         : 15rpx;
+    background     : rgba(255, 255, 255, 1);
+    border         : 1px solid rgba(204, 204, 204, 1);
+
+    image {
+      width : 36rpx;
+      height: 36rpx;
+    }
+  }
+}
+
+// 底部
+.outstandingOrder-footer {
+  position  : fixed;
+  bottom    : 0;
+  left      : 0;
+  width     : 100%;
+  height    : 110rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20rpx 0px rgba(102, 102, 102, 0.1);
+  padding   : 15rpx 30rpx;
+
+  view {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100%;
+    background     : rgba(234, 234, 234, 1);
+    border-radius  : 10rpx;
+    font-size      : 36rpx;
+    font-family    : PingFang SC;
+    font-weight    : 500;
+    color          : rgba(153, 153, 153, 1);
+  }
+
+  .completeColor {
+    background: rgba(163, 38, 53, 1);
+    color     : #fff;
+  }
+}
+
+// 弹框确认
+.showModal {
+  position  : fixed;
+  top       : 0;
+  left      : 0;
+  z-index   : 20;
+  width     : 100vw;
+  height    : 100vh;
+  background: rgba(0, 0, 0, .3);
+
+  .showModal-body {
+    position: absolute;
+    top     : 50%;
+    left    : 50%;
+    transform       : translate(-50%, -50%);
+    width           : 600rpx;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius   : 20rpx;
+    padding-bottom  : 104rpx;
+  }
+
+  .showModal-title {
+    height     : 34rpx;
+    line-height: 34rpx;
+    font-size  : 34rpx;
+    text-align : center;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color      : rgba(51, 51, 51, 1);
+    margin     : 40rpx 0;
+  }
+
+  .showModal-time,
+  .showModal-address,
+  .showModal-site {
+    width      : 100%;
+    font-size  : 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color      : rgba(102, 102, 102, 1);
+    padding    : 0 80rpx 30rpx;
+  }
+
+  .showModal-footer {
+    position   : absolute;
+    left       : 0;
+    bottom     : 0;
+    display    : flex;
+    align-items: center;
+    width      : 100%;
+    height     : 104rpx;
+    border-top : 2rpx solid rgb(234, 234, 234);
+    font-size  : 34rpx;
+
+    view {
+      flex           : 1;
+      display        : flex;
+      justify-content: center;
+    }
+
+    view:first-child {
+      font-family : PingFang SC;
+      color       : rgba(153, 153, 153, 1);
+      border-right: 2rpx solid rgb(234, 234, 234);
+    }
+
+    view:last-child {
+      font-family: PingFang SC;
+      color      : rgba(163, 38, 53, 1);
+    }
+  }
+}

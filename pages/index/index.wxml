@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='login-wrapper'>
+    <view class='banner-wrapper flex'>
+      <view class='banner flex'>送货员</view>
+    </view>
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    <!-- <button class="login" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      授权登录
+    </button> -->
+<button class="login" type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+  </view>
+  
+</view>

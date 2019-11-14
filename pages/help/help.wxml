@@ -1,0 +1,146 @@
+<!--pages/help/help.wxml-->
+<view class='help-wrapper'>
+  <view class='list'>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>01</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>用户通过小程序进行抢单/接单</view>
+        <image src='/images/help/help01.png'></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>02</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>抢到/接到订单后，订单状态变成 “订单准备中”
+        </view>
+        <image src="/images/help/help02.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>03</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>公司后台查看到这个订单后会 给其分配配酒数量
+        </view>
+        <image src="/images/help/help03.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>04</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          公司后台分配配酒数量后，订单 状态变成“提货确认单”
+        </view>
+        <image src="/images/help/help04.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>05</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          用户通过这个提货确认单到提 货地点去按照这个数量去提取物品。
+        </view>
+        <image src="/images/help/help05.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>06</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          用户提取成功后，点击“确认提货 无误”订单状态变成“进行中订单”
+        </view>
+        <image src="/images/help/help06.png"></image>
+      </view>
+    </view>
+
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>07</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          用户到达现场将信息填写完成 确认后，订单状态变成待结订单
+        </view>
+        <image src="/images/help/help07.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>08</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <image src="/images/help/downArrow.png"></image>
+          <image src="/images/help/downArrow.png"></image>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          填写完会场信息后，在次编写剩 余信息后，点击完成
+        </view>
+        <image src="/images/help/help08.png"></image>
+      </view>
+    </view>
+    <view class='column flex'>
+      <view class='column-left flex'>
+        <view class='left-top'>09</view>
+        <view class='left-middle'></view>
+        <view class='left-bottom flex'>
+          <view class="circle"></view>
+        </view>
+      </view>
+      <view class='column-right flex'>
+        <view>
+          之后将剩余的酒送回仓库与 管理员确认，管理员确认无 误后，后台操作，订单结束
+        </view>
+        <image src="/images/help/help09.png"></image>
+      </view>
+    </view>
+
+  </view>
+</view>
